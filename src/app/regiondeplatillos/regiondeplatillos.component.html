@@ -1,0 +1,25 @@
+  <h3>Top Heroes</h3>
+  <div class="grid grid-pad" >
+    <a *ngFor="let platillos of platos" class="col-1-4" routerLink="/paises   {{platillos.id}} " [routerLink]="'/paises/'+ platillos.id">
+      
+      <div class="modulo de paises">
+        <h4>{{platillos.nombre}}</h4>
+      </div>
+    </a>
+  </div>
+
+
+  <!--
+<div *ngIf="paiselecionado; else noplatos" routerLink="/regionesplatillos">
+
+    <h2>Nombre {{paiselecionado.pais | uppercase}}</h2>
+    <div><span>Nombre: </span>{{paiselecionado.nombre}}</div>
+    <div><span>país: </span>{{paiselecionado.pais}}</div>
+  </div>
+  
+  <ng-template #noplatos>
+    <p>No a selecionado ningun plato</p>
+  </ng-template>
+
+
+-->

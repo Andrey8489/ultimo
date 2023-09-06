@@ -1,0 +1,34 @@
+<a routerLink="/platillos">paises</a>
+<h1>Lista de platillos</h1>
+
+<!--<ul class="platillos">
+  la variable de PLATILLOS cuenta con los valores de plartoselecionado
+  <li *ngFor="let platillos of platos "
+    [class.selected]="platillos === platilloselecionado"
+    (click)="onSelect(platillos)">
+  span es el elemento que muestra en la viñetas los paises y los nombre de la comida 
+  aca sedeberia poner la lista dividiendolo por pais y cada uno cuente con el span
+      <span class="badge">{{platillos.pais}}</span> {{platillos.nombre}}
+  </li> 
+</ul> -->
+
+
+<!--<div *ngIf="platos">
+  <h2>platos nacionales de Italia</h2>
+    <ul>
+      <li *ngFor="let platillos of platos">
+        <p *ngIf="platillos"></p>
+      </li>
+    </ul>
+</div> -->
+
+
+<ul class="platos">
+  <li *ngFor="let platillos of platos" routerLink="/platillos/{{platillos.id}}">
+  <span class="badge">{{platillos.id}}</span> {{platillos.nombre}}
+</li>
+</ul>
+
+
+<app-detalleplatillos *ngIf="platilloselecionado" [platos]="platilloselecionado"></app-detalleplatillos>
+<!--<app-regiondeplatillos *ngIf=""></app-regiondeplatillos>-->

@@ -1,0 +1,12 @@
+
+<div *ngIf="platos; else noplatos" routerLink="/platillos">
+
+  <h2>Nombre {{platos.nombre | uppercase}}</h2>
+  <div><span>Nombre: </span>{{platos.nombre}}</div>
+  <div><span>país: </span>{{platos.pais}}</div>
+</div>
+
+<ng-template #noplatos>
+  <p>No a selecionado ningun plato</p>
+</ng-template>
+ 
